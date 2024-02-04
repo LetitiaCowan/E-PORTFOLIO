@@ -100,42 +100,77 @@
       <div class="modal">
         <div class="modal__half modal__about">
           <h3 class="modal__title">Here's a bit more about me.</h3>
-          <h4 class="modal__sub-title modal__sub-title--about"></h4>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Engineer
+          </h4>
           <p class="modal__para">
-            I'm a 21 year old Software Engineer wtih a strong passion for
-            developing websites with great user experiences
+            I'm a 21 year old
+            <b class="orange">Frontend Software Engineer </b>wtih a strong
+            passion for developing websites with great
+            <b class="orange">user experiences.</b>
             <br />
             I currently solve extremely difficult engineering problems every day
-            with React, TypeScript and MobX in Canva's Video team.
+            with <b class="orange">React</b>,
+            <b class="orange">TypeScript</b> and <b class="orange">MobX</b> in
+            Canva's Video team.
           </p>
           <div class="modal__languages">
-            <figure>
+            <figure class="modal__language">
               <img
+                class="modal__language--img"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                 alt=""
               />
+              <span class="language__name">HTML</span>
             </figure>
-            <figure>
+            <figure class="modal__language">
               <img
+                class="modal__language--img"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                 alt=""
               />
+              <span class="language__name">HTML</span>
             </figure>
-            <figure>
+            <figure class="modal__language">
               <img
+                class="modal__language--img"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                 alt=""
               />
+              <span class="language__name">HTML</span>
             </figure>
-            <figure>
+            <figure class="modal__language">
               <img
+                class="modal__language--img"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
                 alt=""
               />
+              <span class="language__name">HTML</span>
             </figure>
           </div>
         </div>
-        <div class="modal__half modal__contact">Let's have a chat!</div>
+        <div class="modal__half modal__contact">
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities. I'm looking forware to
+            hearing from you
+          </h3>
+          <form id="contact__form" action="">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text"></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Email</label>
+              <input class="input" name="user_email" type="email" />
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="user_message" type="text"></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send it my way</button>
+          </form>
+        </div>
       </div>
     </section>
 

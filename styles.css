@@ -81,6 +81,31 @@ button {
     background-color: #242424;
 }
 
+input,
+textarea {
+    width: 100%;
+    background-color: #242424;
+    color: #fff;
+    outline: none;
+    border: 3px solid #c0c4cc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 40px;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 8px;
+}
+
+
 /*
 
 NAV 
@@ -145,16 +170,97 @@ MODAL
 
 .modal__half {
     width: 50%;
+    padding: 40px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .modal__about {
      background-color: rgb(245, 245, 245);
+    
 }
 
 .modal__contact {
     background-color: #242424;
     color: white;
 }
+
+.modal__languages {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal__language {
+    width: 25%;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__language:hover .modal__language--img {
+    filter: brightness(.85);
+    transform: scale(.9);
+}
+
+.language__name {
+    position: absolute;
+    bottom: -10px;
+    transform: scale(0);  
+    transition: all ease 200ms;  
+}
+
+.modal__language:hover .language__name {
+    transform: scale(1);
+}
+
+.modal__language--img {
+    width: 100%;
+    transition: all ease 250ms;
+}
+
+.modal__title {
+    font-size: 26px;
+}
+
+.modal__sub-title {
+    margin: 12px 0 24px 0;
+    font-size: 14px;
+}
+
+.modal__para {
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+
+.form__item {
+    margin-bottom: 20px;
+}
+
+.form__submit {
+    background-color: #f06449;
+    border: 2px solid #f06449;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 24px;
+    font-size: 20px;
+    transition: all ease 300ms;
+}
+
+.form__submit:hover {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.form__submit:active {
+    border-color: #f06449;
+    color: #f06449;
+}
+
 
 
 /*
