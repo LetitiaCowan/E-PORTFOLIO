@@ -1,10 +1,8 @@
-// rememeber to fix the bug on app.js for the message portion of my email template (not saving correctly)
-
 function contact() {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading"); // storing .class in "loading"
   const success = document.querySelector(".modal__overlay--success"); //storing .class in "success"
-  loading.classList += " modal__overlay--visible"; //still unsure on what this is doing ???
+  loading.classList += " modal__overlay--visible"; // adding modal__overlay--visible to the end of loading class
 
   emailjs
     .sendForm(
@@ -23,4 +21,20 @@ function contact() {
         "The email service is temporarily unavailable. Please contact me directly on Letitia.cowan01@hotmail.com"
       );
     });
+}
+
+// rememeber to fix the bug on email.js for the message portion of my email template (not saving correctly)
+
+// fix the email sender, stopped loading once i set up annimation for the modal overlay entry
+
+let isModalOpen = false;
+
+function toggleModal() {
+	if (isModalOpen) {
+		isModalOpen = false
+		return document.body.classList.remove("modal--open")
+	}
+	isModalOpen = true;
+	document.body.classList += ' modal--open'
+
 }
