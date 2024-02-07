@@ -26,6 +26,7 @@ a {
 
 .click {
     transition: all ease 200ms;
+    cursor: pointer;
 }
 
 .container {
@@ -92,6 +93,7 @@ textarea {
     border-left: none;
     border-right: none;
     height: 40px;
+    transition: all ease 300ms;
 }
 
 label {
@@ -103,6 +105,15 @@ textarea {
     resize: vertical;
     height: 100px;
     margin-top: 8px;
+}
+
+input:hover,
+textarea:hover {
+    border-color: #dcdfe6;
+}
+
+input:focus, text:focus {
+    border-color: #f06449;
 }
 
 
@@ -174,6 +185,7 @@ MODAL
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .modal__about {
@@ -258,7 +270,60 @@ MODAL
 
 .form__submit:active {
     border-color: #f06449;
-    color: #f06449;
+    color: #f06449; 
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+}
+
+.modal__overlay--loading {
+    background-color: #242424;
+    font-size: 80px;
+}
+
+.modal__overlay--success {
+    background-color: #4bb543;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px;
+}
+
+.modal__overlay--visible {
+    z-index: 1;
+}
+
+.fa-spinner {
+    animation: spinner 750ms infinite linear
+
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 36px;
+    z-index: 100;
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
 }
 
 
