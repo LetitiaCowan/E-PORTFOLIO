@@ -19,6 +19,7 @@ p {
 
 section {
     background-color: rgb(245, 245, 245) ;
+    transition: all ease 300ms;
 }
 
 a {
@@ -60,6 +61,7 @@ button {
 .center {
     text-align: center;
 }
+
 
 .nav__link {
     position: relative;
@@ -119,6 +121,56 @@ input:focus, text:focus {
     border-color: #f06449;
 }
 
+nav,
+.scroll,
+header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 600ms ease;
+}
+
+/* "when modal is open, do this" is what this is saying */
+.modal--open nav, 
+.modal--open .scroll,
+.modal--open header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms ease;
+}
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para {
+    color: #fff;
+}
+
+.dark-theme section {
+    background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+    filter: none;
+}
+
+.dark-theme .scroll__icon{
+    border-color: #fff;
+}
+
+.dark-theme .scroll__icon::after {
+    background-color: #fff;
+}
+
+.dark-theme .mail__btn {
+    background-color: #fff;
+    color: #242424;
+}
+
+.dark-theme .title-secondary {
+    color: #1973f2;
+}
 
 /*
 
@@ -206,11 +258,6 @@ MODAL
     transform: translateX(0%);
 }
 
-
-.modal__contact {
-    transform: translateX(200%);
-}
-
 .modal__about {
      background-color: rgb(245, 245, 245);
      transform: translateX(-110%);
@@ -219,6 +266,7 @@ MODAL
 
 .modal__contact {
     background-color: #242424;
+    transform: translateX(110%);
     color: white;
 }
 
@@ -276,8 +324,8 @@ MODAL
 }
 
 .form__submit {
-    background-color: #f06449;
-    border: 2px solid #f06449;
+    background-color: #1973f2;
+    border: 2px solid #1973f2;
     color: white;
     font-weight: bold;
     width: 100%;
@@ -302,9 +350,9 @@ MODAL
     top: 0;
     left: 0;
     display: none;
+    z-index: -1;
     align-items: center;
     justify-content: center;
-    z-index: -1;
     height: 100%;
     width: 100%;
 }
@@ -323,6 +371,7 @@ MODAL
 }
 
 .modal__overlay--visible {
+    display: flex;
     z-index: 1;
 }
 
@@ -386,13 +435,14 @@ HEADER
     margin-bottom: 12px;
     text-align: left;
     line-height: 1;
-
 }
 
 .title-secondary,
 .orange {
-    color: #f06449; !important
+    color: #1973f2; !important
 }
+
+/* #f06449 */
 
 .social__list {
     margin-top: 16px;
@@ -403,7 +453,7 @@ HEADER
 
 .social__link {
     color: white;
-    background-color: #f06449;
+    background-color: #1973f2;
     padding: 6px;
     width: 32px;
     height: 32px;

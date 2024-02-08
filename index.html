@@ -56,12 +56,13 @@
           <li class="nav__link">
             <a
               href="#"
-              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black" 
+              onclick="toggleModal()"
               >Contact</a
             >
           </li>
 
-          <li class="click nav__link">
+          <li class="click nav__link" onclick="toggleContract()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -78,7 +79,7 @@
             I'm a <b class="orange">Frontend Software</b> Engineer with a strong
             passion for building web applications with great user exeriences.
             <br />
-            Here's a bit more <b class="orange">about me.</b>
+            Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
           </p>
           <div class="social__list">
             <a
@@ -161,6 +162,7 @@
           </div>
         </div>
         <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click cursor" onclick="toggleModal()"></i>
           <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
           <h3 class="modal__sub-title modal__sub-title--contact">
             I'm currently open to new opportunities. I'm looking forware to
@@ -188,7 +190,6 @@
             Thanks for the message! Looking forward to speaking with you soon!
           </div>
         </div>
-        <i class="fas fa-times modal__exit click"></i>
       </div>
     </section>
 
