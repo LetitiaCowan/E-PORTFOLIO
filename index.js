@@ -1,7 +1,37 @@
-let isModalOpen = false;
+// ROADMAP FOR SUCCESS
+// get an intership at a digital agency, basically having to building projects
+// junior role at digital comany for about 6 months
+// go to sofware comapny for about 6 months
+// lastly, go for a bigger role at a sofware company
 
-let contrastToggle = false; // starts off false
+let isModalOpen = false; //modal opener
+let contrastToggle = false; // starts off false //contract toggle
+const scaleFactor = 1 / 20
+// function moveBackground(event) {
+//   const shapes = document.querySelectorAll(".shape");
+//   const x = Event.clientX;
+//   const y = Event.clientY;
+//   console.log(x, y);
+// }
+ 
 
+
+function log() {
+  const shapes = document.querySelectorAll(".shape");
+  const x = event.clientX * scaleFactor;
+  const y = event.clientY * scaleFactor;
+  // console.log(x, y);
+
+  for (i = 0; i < shapes.length; ++i) {
+    const isOdd = i % 2 !== 0
+    const boolInt = isOdd ? -1 : 1;
+    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
+  }
+}
+ 
+
+
+// function or contract toggle
 function toggleContract() {
   contrastToggle = !contrastToggle //changes to the oposite boolea, in this case since it starts off false, changes to true
   if (contrastToggle) { // "if" contractToggle is = to true, then add this theme onto the body, which it is
@@ -13,7 +43,7 @@ function toggleContract() {
   )
 }
 
-function contact() {
+function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading"); // storing .class in "loading"
   const success = document.querySelector(".modal__overlay--success"); //storing .class in "success"
@@ -21,22 +51,24 @@ function contact() {
 
   emailjs
     .sendForm(
-      "service_urk5139",
-      "template_5zkhpqe",
-      event.target,
-      "79JfK9r_OAocxqx1f"
+      "service_urk5139",  //
+      "template_5zkhpqe", //  connects email.js to your account/website
+      event.target,       //
+      "79JfK9r_OAocxqx1f" //
     )
-    .then(() => {
+    .then(() => { //unlocks promise... obviously
       loading.classList.remove("modal__overlay--visible");
       success.classList += " modal__overlay--visible";
     })
-    .catch(() => {
+    .catch(() => { 
       success.classList += " modal__overlay--visible";
       alert(
         "The email service is temporarily unavailable. Please contact me directly on Letitia.cowan01@hotmail.com"
       );
     });
 }
+
+// remember to turn the underlines for the anchor links to white
 
 // rememeber to fix the bug on email.js for the message portion of my email template (not saving correctly)
 

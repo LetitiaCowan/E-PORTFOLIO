@@ -138,6 +138,12 @@ header {
     transition: all 400ms ease;
 }
 
+/*
+
+DARK THEME 
+
+*/
+
 .dark-theme .title,
 .dark-theme .section__title,
 .dark-theme .section__sub-title,
@@ -171,6 +177,32 @@ header {
 .dark-theme .title-secondary {
     color: #1973f2;
 }
+
+
+
+.dark-theme .link__hover-effect--black:after {
+    background-color: #fff;
+}
+
+.dark-theme .link__hover-effect--white:after {
+    background-color: #242424;
+}
+
+.dark-theme .footer__logo--img {
+    filter: invert();
+}
+
+.dark-theme footer {
+    background-color: rgb(245, 245, 245);
+}
+
+.dark-theme .footer__social--link, 
+.dark-theme .footer__copyright {
+    color: #242424;
+    font-weight: 700;
+}
+
+
 
 /*
 
@@ -592,6 +624,12 @@ PROJECTS
     opacity: 0.7;
 }
 
+.projects__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
 /*
 
 FOOTER 
@@ -632,4 +670,136 @@ footer {
 
 .link__hover-effect--white:after {
     background-color: white;
+}'
+
+
+/*
+
+SHAPES 
+
+*/
+
+
+
+
+.um {
+    top: 35vh;
+    width: 5vw;
 }
+
+/* some class names wont work and some do, im not sure as to why but even though there are no spelling mistakes */
+/* or syntax errors, it will not apply my stylings onto the img  */
+
+
+
+
+
+/* 
+.okay {
+    top: 15vh;
+    left: 5vw;
+    position: fixed;
+}
+
+.huh {
+    top: 15vh;
+    left: 50vw;
+    position: fixed;
+}
+ 
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+    position: fixed;
+}
+ 
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+    position: fixed;
+}
+ 
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+    position: fixed;
+}
+ 
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+    position: fixed;
+}
+ 
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+    position: fixed;
+}
+ 
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+    position: fixed;
+}
+ 
+.shape--8    {
+    top: 80vh;
+    left: 80vw;
+    position: fixed;
+} */
+
+
+
+
+.shape {
+    position: fixed;
+}
+ 
+.shape-0 {
+    top: 15vh;
+    left: 5vw;
+}
+
+.shape-1 {
+    top: 15vh;
+    left: 50vw;
+}
+
+.shape-2 {
+    top: 15vh;
+    left: 80vw;
+}
+
+.shape-3 {
+    top: 50vh;
+    left: 5vw;
+}
+
+.shape-4 {
+    top: 50vh;
+    left: 50vw;
+}
+
+.shape-5 {
+    top: 50vh;
+    left: 80vw;
+}
+ 
+.shape-6 {
+    top: 80vh;
+    left: 5vw;
+}
+ 
+.shape-7 {
+    top: 80vh;
+    left: 50vw;
+}
+
+.shape-8 {
+    top: 80vh;
+    left: 80vw; 
+}
+
+/* 2:43:34  fes advanced PF*/
+
