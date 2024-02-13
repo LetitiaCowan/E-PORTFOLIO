@@ -7,13 +7,6 @@
 let isModalOpen = false; //modal opener
 let contrastToggle = false; // starts off false //contract toggle
 const scaleFactor = 1 / 20
-// function moveBackground(event) {
-//   const shapes = document.querySelectorAll(".shape");
-//   const x = Event.clientX;
-//   const y = Event.clientY;
-//   console.log(x, y);
-// }
- 
 
 
 function log() {
@@ -32,7 +25,7 @@ function log() {
 
 
 // function or contract toggle
-function toggleContract() {
+function toggleContrast() {
   contrastToggle = !contrastToggle //changes to the oposite boolea, in this case since it starts off false, changes to true
   if (contrastToggle) { // "if" contractToggle is = to true, then add this theme onto the body, which it is
     document.body.classList += " dark-theme"

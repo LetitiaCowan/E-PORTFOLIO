@@ -35,18 +35,19 @@
           <img id="personal-logo" src="assets/logo.svg" alt="" />
         </figure>
 
-        <ul class="nav__link--list">
+        <ul class="nav__link--list" >
           <li class="nav__link">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclick="toggleModal()"
               >About</a
             >
           </li>
 
           <li class="nav__link">
             <a
-              href="#"
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
               >Projects</a
             >
@@ -61,7 +62,7 @@
             >
           </li>
 
-          <li class="click nav__link" onclick="toggleContract()">
+          <li class="click nav__link" onclick="toggleContrast()">
             <a
               href="#"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -101,10 +102,11 @@
           </div>
         </div>
       </header>
-
+      <a href="#">
       <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
+       </a>
       <a href="#projects" class="scroll">
         <div class="scroll__icon click"></div>
       </a>
@@ -324,7 +326,8 @@
                 >GitHub</a
               >
             </li>
-            <li class="footer__social--list">
+              
+              <li class="footer__social--list" onclick="toggleModal()" >
               <a
                 href="#"
                 class="footer__social--link link__hover-effect--white link__hover-effect"
@@ -333,6 +336,7 @@
             </li>
             <li class="footer__social--list">
               <a
+                onclick="toggleModal()"
                 href="#"
                 class="footer__social--link link__hover-effect--white link__hover-effect"
                 >Contact</a

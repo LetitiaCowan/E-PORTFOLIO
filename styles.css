@@ -204,6 +204,8 @@ DARK THEME
 
 
 
+
+
 /*
 
 NAV 
@@ -509,6 +511,9 @@ HEADER
     position: absolute;
     bottom: 32px;
     right: 40px;
+    z-index: 100;
+    position: fixed;
+    box-shadow: 0 10px 30px 0 rgb(0, 0, 0, 0.5);
 }
 
 .scroll {
@@ -637,6 +642,7 @@ FOOTER
 */
 
 footer {
+    position: relative;
     background-color: #242424;
     display: flex;
     padding: 6% 0;
@@ -803,3 +809,71 @@ SHAPES
 
 /* 2:43:34  fes advanced PF*/
 
+/*
+
+MEDIA QUERIES 
+
+*/
+
+
+/* smart phones, tablets, large smart phones */
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 80px;
+    }
+
+    .header__para {
+        font-size: 20px;
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        height: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+    }
+}
+
+/* small phones  */
+
+@media(max-width: 480px) {
+    .title {
+        font-size: 52px;
+    }
+
+    .header__para {
+        font-size: 18px;
+    }
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .projects__description--para {
+        display: none;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title {
+        margin-bottom: 8px;
+    }
+
+    .modal__half {
+        padding: 40px;
+    }
+}
