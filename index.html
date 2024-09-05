@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome .com/c8e4d183c2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Letitia Cowan</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "79JfK9r_OAocxqx1f",
+      });
+   })();
+</script>
+  </head>
+  <body>
+    <section id="landing-page" onmousemove="log()">
+      <nav>
+        <figure class="nav__logo--wrapper">
+          <img id="personal-logo" src="assets/logo.svg" alt="" />
+        </figure>
+
+        <ul class="nav__link--list" >
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              onclick="toggleModal()"
+              >About</a
+            >
+          </li>
+
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Projects</a
+            >
+          </li>
+
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black click" 
+              onclick="toggleModal()"
+              >Contact</a
+            >
+          </li>
+
+          <li class="click nav__link" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            ></a>
+          </li>
+        </ul>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title title-secondary">I'm Letitia</h1>
+          <p class="header__para">
+            I'm a <b class="orange">Frontend Software</b> Developer with a strong
+            passion for building web applications with great user experiences.
+            <br />
+            Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
+          </p>
+          <div class="social__list">
+            <a
+              href="https://www.google.com/webhp?hl=en&sa=X&ved=0ahUKEwiznrvx-4uEAxUTsFYBHTNSDaQQPAgJ"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="/assets/David Bragg Resume.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+            <a href="" class="social__link click">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <a href="#">
+      <button class="mail__btn click" onclick="toggleModal()">
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+       </a>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+
+
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title">Here's a bit more about me.</h3>
+          <h4 class="modal__sub-title modal__sub-title--about">
+            Frontend Software Developer
+          </h4>
+          <p class="modal__para">
+            I'm a 21 year old
+            <b class="orange">Frontend Software Developer </b>wtih a strong
+            passion for developing websites with great
+            <b class="orange">user experiences.</b>
+            <br />
+            I currently solve difficult engineering problems every day
+            using <b class="orange">HTML</b>,
+            <b class="orange">CSS</b> and <b class="orange">JavaScript</b> in
+            Canva's Video team.
+          </p>
+
+          <div class="modal__lang--container">
+            <div class="modal__languages">
+              <figure class="modal__language">
+                <img
+                  class="modal__language--img"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png"
+                  alt=""
+                />
+                <span class="language__name">HTML</span>
+              </figure>
+              <figure class="modal__language">
+                <img
+                  class="modal__language--img"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png"
+                  alt=""
+                />
+                <span class="language__name">CSS</span>
+              </figure>
+              <figure class="modal__language js__img--wrapper">
+                <img
+                  class="modal__language--img js__img"
+                  src="https://cdn.worldvectorlogo.com/logos/javascript-1.svg"
+                  alt=""
+                />
+                <span class="language__name">JavaScript</span>
+              </figure>
+              
+            </div>
+            <figure class="modal__language js__img--wrapper">
+              <img
+                class="modal__language--img js__img"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTrDLvwZVRqiTYUMuGswcv7qn72HE16bZkNQ&s"
+                alt=""
+              />
+              <span class="language__name">JavaScript</span>
+            </figure>
+          </div>
+        </div>
+        <div class="modal__half modal__contact">
+        <i class="fas fa-times modal__exit click cursor" onclick="toggleModal()"></i>
+          <h3 class="modal__title modal__title--contact">Let's have a chat!</h3>
+          <h3 class="modal__sub-title modal__sub-title--contact">
+            I'm currently open to new opportunities. I'm looking forward to
+            hearing from you
+          </h3>
+          <form id="contact__form" action="" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label">Name</label>
+              <input class="input" name="user_name" type="text"></input>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">E-mail</label>
+              <input class="input" name="user_email" type="text"/>
+            </div>
+            <div class="form__item">
+              <label class="form__item--label">Message</label>
+              <textarea class="input" name="message" type="text"></textarea>
+            </div>
+            <button  class="form__submit">Send it my way</button>
+          </form>
+          <div class="modal__overlay modal__overlay--loading">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="modal__overlay modal__overlay--success">
+            Thanks for the message! Looking forward to speaking with you soon!
+          </div>
+        </div>
+      </div>
+     <img class="shape shape-0" src="assets/semi circle.svg" alt="">
+     <img class="shape shape-1" src="assets/circle.svg" alt="">
+     <img class="shape shape-2" src="assets/squiggly.svg" alt="">
+     <img class="shape shape-3" src="assets/circle.svg" alt="">
+     <img class="shape shape-4" src="assets/triangle.svg" alt="">
+     <img class="shape shape-5" src="assets/circle.svg" alt="">
+     <img class="shape shape-7" src="assets/squiggly.svg" alt="">
+     <img class="shape shape-8" src="assets/semi circle.svg" alt="">
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="orange">Projects</span>
+          </h1>
+          <ul class="projects__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/JS-library.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">E-Commerce Project</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript, React
+                  </h4>
+                  <p class="projects__description--para">
+                    In this project, I wanted to challange myself and create a E-commerce website. I did this predominantly using React which helped to seamlessly blend in my HTML, CSS and JavaScript. through this project, I gained confidence in accessing and rendering APIs onto sites for a smooth and user friendly finish.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/LetitiaCowan/React-E-Com" target="_blank" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://react-e-commerce-tan-omega.vercel.app/" target="_blank" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
+            
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/blinker mockup.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Movie Search Engine</h3>
+                  <h4 class="project__description--sub-title">
+                    Html, CSS, JavaScript
+                  </h4>
+                  <p class="projects__description--para">
+                    This was one of the first projects where I used JavaScript to hit a API and use the data gathered to render what the user desired. This was a fun challange as I wanted to give it a go using only vanilla JavaScript.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/LetitiaCowan/Wk-4-Final-Project" target="_blank" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://letitiacowan.github.io/Wk-4-Final-Project/" class="project__description--link">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="assets/Screenshot 2024-03-08 164752.png"
+                  class="project__img"
+                  alt=""
+                />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Treact Website Mini Project</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS
+                  </h4>
+                  <p class="projects__description--para">
+                    For this mini project, I did for a bit of fun and practice. I coded a popular website from scratch to build up my HTML and CSS skills. I learnt a lot whilst doing this as the placement and the way every section reacts with one another was a slight challenge.
+                  </p>
+                  <div class="project__description--links">
+                    <a href="https://github.com/LetitiaCowan/Treact-Project" class="project__description--link" target="_blank">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://letitiacowan.github.io/Treact-Project/" class="project__description--link" target="_blank">
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row footer__row">
+          <figure>
+            <img class="footer__logo--img" src="/assets/logo.svg" alt="" />
+          </figure>
+          <ul class="footer__social--lists center">
+            <li class="footer__social--list">
+              <a
+                href="#"
+                class="footer__social--link link__hover-effect--white link__hover-effect"
+                >GitHub</a
+              >
+            </li>
+              
+              <li class="footer__social--list" onclick="toggleModal()" >
+              <a
+                href="#"
+                class="footer__social--link link__hover-effect--white link__hover-effect"
+                >LinkedIn</a
+              >
+            </li>
+            <li class="footer__social--list">
+              <a
+                onclick="toggleModal()"
+                href="#"
+                class="footer__social--link link__hover-effect--white link__hover-effect"
+                >Contact</a
+              >
+            </li>
+            <li class="footer__social--list">
+              <a
+                href="#"
+                class="footer__social--link link__hover-effect--white link__hover-effect"
+                >Resume</a
+              >
+            </li>
+          </ul>
+          <div class="footer__copyright">Copyright © Letitia Cowan</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

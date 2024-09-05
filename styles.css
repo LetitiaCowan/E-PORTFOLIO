@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style-type: none;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+section {
+    background-color: rgb(245, 245, 245) ;
+    transition: all ease 300ms;
+}
+
+a {
+    text-decoration: none;
+}
+
+.click {
+    transition: all ease 200ms;
+    cursor: pointer;
+}
+
+
+
+.container {
+    padding: 50px 0;
+    width: 100%;
+}
+
+.row {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+
+.click:active {
+    transform: scale(0.8);
+}
+
+button {
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+
+.nav__link {
+    position: relative;
+}
+
+.link__hover-effect:after {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    height: 3px;
+    width: 0;
+    right: 0;
+    background-color: #242424;
+    transition: all ease 300ms;
+}
+
+.link__hover-effect:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.link__hover-effect--black:after {
+    background-color: #242424;
+}
+
+input,
+textarea {
+    width: 100%;
+    background-color: #242424;
+    color: #fff;
+    outline: none;
+    border: 3px solid #c0c4cc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    height: 40px;
+    transition: all ease 300ms;
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+    margin-top: 8px;
+}
+
+input:hover,
+textarea:hover {
+    border-color: #dcdfe6;
+}
+
+input:focus, textarea:focus {
+    border-color: #f06449;
+}
+
+nav,
+.scroll,
+header {
+    opacity: 1;
+    visibility: visible;
+    transition: all 600ms 600ms ease;
+}
+
+/* "when modal is open, do this" is what this is saying */
+.modal--open nav, 
+.modal--open .scroll,
+.modal--open header {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 400ms ease;
+}
+
+/*
+
+DARK THEME 
+
+*/
+
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para {
+    color: #fff;
+}
+
+.dark-theme section {
+    background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+    filter: none;
+}
+
+.dark-theme .scroll__icon{
+    border-color: #fff;
+}
+
+.dark-theme .scroll__icon::after {
+    background-color: #fff;
+}
+
+.dark-theme .mail__btn {
+    background-color: #fff;
+    color: #242424;
+}
+
+.dark-theme .title-secondary {
+    color: #1973f2;
+}
+
+
+
+.dark-theme .link__hover-effect--black:after {
+    background-color: #fff;
+}
+
+.dark-theme .link__hover-effect--white:after {
+    background-color: #242424;
+}
+
+.dark-theme .footer__logo--img {
+    filter: invert();
+}
+
+.dark-theme footer {
+    background-color: rgb(245, 245, 245);
+}
+
+.dark-theme .footer__social--link, 
+.dark-theme .footer__copyright {
+    color: #242424;
+    font-weight: 700;
+}
+
+
+
+
+
+/*
+
+NAV 
+
+*/
+
+#personal-logo {
+    width: 50px;
+    filter: invert(1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 30px;
+    margin: 0 auto;
+    height: 100px;
+}
+
+.nav__link {
+    margin: 0 12px;
+}
+
+.nav__link--list {
+    display: flex;
+}
+
+.nav__link--anchor {
+    font-size: 16px;
+    color: #242424;
+    font-weight: 700;
+}
+
+.fa-circle-half-stroke {
+    font-size: 20px;
+}
+
+
+
+/*
+
+MODAL
+
+*/
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1100px;
+    height: 700px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    visibility: hidden;
+    z-index: -1;
+    transition: visibility 1s, z-index 1s, box-shadow 1s ease;
+}
+
+.modal--open .modal {
+    z-index: 60;
+    box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+    visibility: visible;
+} 
+
+.modal__half {
+    width: 50%;
+    padding: 40px 72px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: all 300ms ease;
+}
+
+/* whem modal__open is active, target modal__about... i think */
+.modal--open .modal__about,
+.modal--open .modal__contact {
+    transform: translateX(0%);
+}
+
+.modal__about {
+     background-color: rgb(245, 245, 245);
+     transform: translateX(-110%);
+    
+}
+
+.modal__lang--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__contact {
+    background-color: #242424;
+    transform: translateX(110%);
+    color: white;
+}
+
+.js__img {
+    height: 78px;
+    width: 100%;
+}
+
+.modal__languages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.modal__language {
+    width: 28%;
+    padding: 16px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__language:hover .modal__language--img {
+    filter: brightness(.85);
+    transform: scale(.9);
+}
+
+.language__name {
+    position: absolute;
+    bottom: -10px;
+    transform: scale(0);  
+    transition: all ease 200ms;  
+}
+
+.modal__language:hover .language__name {
+    transform: scale(1);
+}
+
+.modal__language--img {
+    width: 100%;
+    transition: all ease 250ms;
+}
+
+.modal__title {
+    font-size: 26px;
+}
+
+.modal__sub-title {
+    margin: 12px 0 24px 0;
+    font-size: 14px;
+}
+
+.modal__para {
+    margin-bottom: 12px;
+    line-height: 1.75;
+}
+
+.form__item {
+    margin-bottom: 20px;
+}
+
+.form__submit {
+    background-color: #1973f2;
+    border: 2px solid #1973f2;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    max-width: 240px;
+    padding: 12px 24px;
+    font-size: 20px;
+    transition: all ease 300ms;
+}
+
+.form__submit:hover {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+.form__submit:active {
+    border-color: #f06449;
+    color: #f06449; 
+}
+
+.modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.modal__overlay--loading {
+    background-color: #242424;
+    font-size: 80px;
+}
+
+.modal__overlay--success {
+    background-color: #4bb543;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 28px;
+}
+
+.modal__overlay--visible {
+    display: flex;
+    z-index: 1;
+}
+
+.fa-spinner {
+    animation: spinner 750ms infinite linear
+}
+
+.modal__exit {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    color: #fff;
+    font-size: 36px;
+    z-index: 100;
+}
+
+
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+
+/*
+
+HEADER
+
+*/
+
+#landing-page {
+    min-height: 100vh;
+}
+
+.header {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 30px;
+
+}
+
+.header__para {
+    font-size: 24px;
+    line-height: 2;
+    max-width: 450px;
+}
+
+.title {
+    font-size: 120px;
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1;
+}
+
+.title-secondary,
+.orange {
+    color: #1973f2; !important
+}
+
+/* #f06449 */ 
+
+.social__list {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.social__link {
+    color: white;
+    background-color: #1973f2;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+
+.mail__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: none;
+    background-color: #242424;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+    z-index: 100;
+    position: fixed;
+    box-shadow: 0 10px 30px 0 rgb(0, 0, 0, 0.5);
+}
+
+.scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.scroll__icon {
+    width: 20px;
+    height: 30px;
+    border: solid 2px #242424;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll__icon::after {
+    content: "";
+    background-color: #242424;
+    width: 4px;
+    height: 6px;
+    border-radius: 2px;
+    animation: scroll 1000ms infinite alternate-reverse;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(3px);
+    }
+
+    100% {
+        transform: translateY(-3px);
+    }
+}
+
+/*
+
+PROJECTS
+
+*/
+
+.section__title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.project__img {
+    width: 100%;
+    transition: all ease 300ms;
+}
+
+.project__wrapper {
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 20px 80px 0 rgb(245, 245, 245, 0.45);
+    overflow: hidden;
+}
+
+.project__description {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: opacity 300ms, transform 450ms ease;
+    color: white;
+    max-width: 550px;
+}
+
+.project__wrapper--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1c1d25;
+    opacity: 0;
+    transition: all 450ms ease
+}
+
+.project__description--title {
+    font-size: 40px;
+}
+
+.project__description--link {
+    color: white;
+    font-size: 20px;
+    margin-right: 16px;
+}
+
+.projects__description--para {
+    margin: 16px 0;
+}
+
+.project__description--sub-title {
+    margin: 8px 0;
+}
+.project__wrapper:hover .project__description {
+    opacity: 1;
+    transform: translateY(-50%);
+}
+
+.project__wrapper:hover .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+}
+
+.project__wrapper:hover .project__wrapper--bg {
+    opacity: 0.7;
+}
+
+.projects__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+/*
+
+FOOTER 
+
+*/
+
+footer {
+    position: relative;
+    background-color: #242424;
+    display: flex;
+    padding: 6% 0;
+}
+.footer__row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__logo--img {
+    width: 70px;
+}
+
+.footer__social--link, 
+.footer__copyright {
+    color: white;
+}
+
+.footer__social--lists {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.footer__social--list {
+    position: relative;
+}
+
+.link__hover-effect--white:after {
+    background-color: white;
+}'
+
+
+/*
+
+SHAPES 
+
+*/
+
+
+
+
+.um {
+    top: 35vh;
+    width: 5vw;
+}
+
+/* some class names wont work and some do, im not sure as to why but even though there are no spelling mistakes */
+/* or syntax errors, it will not apply my stylings onto the img  */
+
+
+
+
+
+/* 
+.okay {
+    top: 15vh;
+    left: 5vw;
+    position: fixed;
+}
+
+.huh {
+    top: 15vh;
+    left: 50vw;
+    position: fixed;
+}
+ 
+.shape--2 {
+    top: 15vh;
+    left: 80vw;
+    position: fixed;
+}
+ 
+.shape--3 {
+    top: 50vh;
+    left: 5vw;
+    position: fixed;
+}
+ 
+.shape--4 {
+    top: 50vh;
+    left: 50vw;
+    position: fixed;
+}
+ 
+.shape--5 {
+    top: 50vh;
+    left: 80vw;
+    position: fixed;
+}
+ 
+.shape--6 {
+    top: 80vh;
+    left: 5vw;
+    position: fixed;
+}
+ 
+.shape--7 {
+    top: 80vh;
+    left: 50vw;
+    position: fixed;
+}
+ 
+.shape--8    {
+    top: 80vh;
+    left: 80vw;
+    position: fixed;
+} */
+
+
+
+
+.shape {
+    position: fixed;
+}
+ 
+.shape-0 {
+    top: 15vh;
+    left: 5vw;
+}
+
+.shape-1 {
+    top: 15vh;
+    left: 50vw;
+}
+
+.shape-2 {
+    top: 15vh;
+    left: 80vw;
+}
+
+.shape-3 {
+    top: 50vh;
+    left: 5vw;
+}
+
+.shape-4 {
+    top: 50vh;
+    left: 50vw;
+}
+
+.shape-5 {
+    top: 50vh;
+    left: 80vw;
+}
+ 
+.shape-6 {
+    top: 80vh;
+    left: 5vw;
+}
+ 
+.shape-7 {
+    top: 80vh;
+    left: 50vw;
+}
+
+.shape-8 {
+    top: 80vh;
+    left: 80vw; 
+}
+
+/* 2:43:34  fes advanced PF*/
+
+/*
+
+MEDIA QUERIES 
+
+*/
+
+
+/* smart phones, tablets, large smart phones */
+
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 80px;
+    }
+
+    .header__para {
+        font-size: 20px;
+    }
+
+    .modal {
+        top: 0;
+        left: 0;
+        height: auto;
+        transform: none;
+        width: 100%;
+        flex-direction: column-reverse;
+        border-radius: 0;
+    }
+
+    .modal__half {
+        width: 100%;
+    }
+}
+
+/* small phones  */
+
+@media(max-width: 480px) {
+    .title {
+        font-size: 52px;
+    }
+
+    .header__para {
+        font-size: 18px;
+    }
+
+    .nav__link:first-child {
+        display: none;
+    }
+
+    .projects__description--para {
+        display: none;
+    }
+
+    .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .project__description--sub-title {
+        margin-bottom: 8px;
+    }
+
+    .modal__half {
+        padding: 40px;
+    }
+}
